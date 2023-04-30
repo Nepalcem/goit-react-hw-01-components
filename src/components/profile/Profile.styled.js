@@ -26,12 +26,14 @@ const StatList = styled.ul`
 `;
 
 const ProfileContainer = styled.div`
+  margin: 0 auto;
   width: 350px;
   height: 450px;
   border-radius: 16px;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
   transition: 0.5s;
   margin-bottom: 400px;
+  margin-top: 30px;
 `;
 
 const DescriptionContainer = styled.div`
