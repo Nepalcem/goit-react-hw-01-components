@@ -2,15 +2,17 @@ import PropTypes from 'prop-types';
 
 const Statistics = ({ title = '', stats }) => {
   return (
-    <section class="statistics">
-      {title.length > 0 && <h2 class="title">{title}</h2>}
+    <section className="statistics">
+      {title.length > 0 && <h2 className="title">{title}</h2>}
 
-      <ul class="stat-list">
+      <ul className="stat-list">
         {stats.map(stat => {
-         return ( <li key={stat.id} class="item">
-            <span class="label">{stat.label}</span>
-            <span class="percentage">{stat.percentage}</span>
-          </li>)
+          return (
+            <li key={stat.id} className="item">
+              <span className="label">{stat.label}</span>
+              <span className="percentage">{stat.percentage}</span>
+            </li>
+          );
         })}
       </ul>
     </section>
@@ -19,7 +21,13 @@ const Statistics = ({ title = '', stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array,
-}
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
 
 export default Statistics;
