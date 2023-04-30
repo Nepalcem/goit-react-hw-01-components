@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const FriendList = ({ friends }) => {
   return (
     <ul class="friend-list">
@@ -13,6 +15,10 @@ const FriendList = ({ friends }) => {
       })}
     </ul>
   );
+};
+
+FriendList.propTypes = {
+  friend: PropTypes.array,
 };
 
 export default FriendList;
