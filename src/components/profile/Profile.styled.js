@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 const StatListItem = styled.li`
   text-align: center;
-  background-color: #e5e4e2;
+  background-color: #e7eef4;
   flex-basis: 100%;
   padding: 15px;
   border-top: 1px solid #708090;
   &:not(:last-child) {
-    border-right: 1px solid #708090;
+    border-right: 1px solid rgba(90, 90, 90, 0.35);
   }
   & .label,
   .quantity {
@@ -34,7 +34,7 @@ const StatList = styled.ul`
 
 const ProfileContainer = styled.div`
   margin: 0 auto;
-  width: 350px;
+  width: 320px;
   border-radius: 12px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
   transition: 0.5s;
