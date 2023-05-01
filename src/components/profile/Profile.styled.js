@@ -25,20 +25,23 @@ const StatList = styled.ul`
   display: flex;
   height: 100%;
   & :first-child {
-    border-bottom-left-radius: 16px;
+    border-bottom-left-radius: 12px;
   }
   & :last-child {
-    border-bottom-right-radius: 16px;
+    border-bottom-right-radius: 12px;
   }
 `;
 
 const ProfileContainer = styled.div`
   margin: 0 auto;
   width: 350px;
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
   transition: 0.5s;
   margin-top: 30px;
+  &:hover {
+    transform: perspective(1500px) rotateY(7deg) rotateX(5deg);
+  }
 `;
 
 const DescriptionContainer = styled.div`
@@ -57,6 +60,8 @@ const DescriptionContainer = styled.div`
     border-radius: 50%;
     margin-bottom: 40px;
     margin-top: 10px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   }
   & p:not(:last-child) {
     margin-bottom: 20px;
