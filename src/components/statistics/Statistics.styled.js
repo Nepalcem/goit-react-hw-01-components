@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StatisticsContainer = styled.section`
-  margin: 30px auto;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +33,9 @@ const UploadItem = styled.li`
   & .label {
     display: inline-block;
     margin-bottom: 5px;
+  }
+  & .percentage {
+    font-weight: 500;
   }
 `;
 
